@@ -8,20 +8,21 @@ const Home = () => {
 
   const [products, setProducts] = useState([])
   const [search, setSearch] = useState("")
+  const [category, setCategory] = useState("")
 
   useEffect(() => {
     fetchProducts()
-  },[search])
+  },[search,category])
 
   const fetchProducts = async () => {
-    const res = await getProducts(search)
+    const res = await getProducts(search,category)
     if (res && res.success) {
       setProducts(res.data)
     }
   }
   return (
     <div className='home'>
-        <Header setSearch={setSearch}/>
+        <Header setSearch={setSearch} setCategory={setCategory}/>
 
         <div className='home-content'>
             <h2 className='home-title'>Products</h2>

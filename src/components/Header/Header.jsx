@@ -3,7 +3,7 @@ import './Header.css'
 import SearchBar from '../SearchBar/SearchBar'
 import CategoryFilter from '../CategoryFilter/CategoryFilter'
 
-const Header = ({setSearch}) => {
+const Header = ({setSearch ,setCategory}) => {
   return (
       <header className='header'>
       <div className='logo'>
@@ -11,7 +11,7 @@ const Header = ({setSearch}) => {
       </div>
       <div className='header-center'>
         <SearchBar setSearch={setSearch}/>
-        <CategoryFilter/>
+        <CategoryFilter setCategory={setCategory}/>
       </div>
       
       <nav className='nav-links'>
