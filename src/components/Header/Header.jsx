@@ -2,6 +2,7 @@ import React from 'react'
 import './Header.css'
 import SearchBar from '../SearchBar/SearchBar'
 import CategoryFilter from '../CategoryFilter/CategoryFilter'
+import {Link} from 'react-router-dom'
 
 const Header = ({setSearch ,setCategory}) => {
   return (
@@ -16,10 +17,10 @@ const Header = ({setSearch ,setCategory}) => {
       
       <nav className='nav-links'>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/cart">Cart</a></li>
-          <li><a href="/checkout">Checkout</a></li>
-          <li><a href="/admin">Admin</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/cart">Cart</Link></li>
+          <li><Link to="/checkout">Checkout</Link></li>
+          <li><Link to="/admin">Admin</Link></li>
         </ul>
       </nav>
     </header>
