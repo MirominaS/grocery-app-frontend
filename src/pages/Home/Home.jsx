@@ -1,32 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import Header from '../../components/Header/Header'
 import ProductList from '../../components/ProductList/ProductList'
+import { getProducts } from '../../api/productApi'
 
 const Home = () => {
-     const products = [
-    {
-      id: 1,
-      name: "Apple",
-      price: 120,
-      category: "Fruits",
-      image_url: "/placeholder.png"
-    },
-    {
-      id: 2,
-      name: "Milk",
-      price: 0.8,
-      category: "Dairy",
-      image_url: "/placeholder.png"
-    },
-    {
-      id: 3,
-      name: "Bread",
-      price: 1.0,
-      category: "Bakery",
-      image_url: "/placeholder.png"
+
+  const [products, setProducts] = useState([])
+
+  useEffect(() => {
+    fetchProducts()
+  },[])
+
+  const fetchProducts = async () => {
+    const res = await getProducts()
+    if (res && res.success) {
+      setProducts(res.data)
     }
-  ];
+  }
   return (
     <div className='home'>
         <Header/>
