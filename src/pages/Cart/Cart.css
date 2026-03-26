@@ -16,13 +16,13 @@
 
 .cart-title {
   font-size: 24px;
-  color: #EC1B24; 
+  color: var(--primary-color); 
   margin-bottom: 16px;
 }
 
 .empty-cart {
   font-size: 16px;
-  color: #157946; 
+  color:  var(--secondary-color); 
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {

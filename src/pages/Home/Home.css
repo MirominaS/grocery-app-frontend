@@ -9,7 +9,7 @@
 
 .home-title {
   font-size: 24px;
-  color: #EC1B24;
+  color: var(--primary-color);
   margin-bottom: 16px;
   text-align: center;
 }
