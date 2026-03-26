@@ -1,0 +1,37 @@
+.cart-page {
+  background-color: #F9F9F9;
+  min-height: 100vh;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.cart-items-section {
+  flex: 2;
+}
+
+.cart-title {
+  font-size: 24px;
+  color: #EC1B24; 
+  margin-bottom: 16px;
+}
+
+.empty-cart {
+  font-size: 16px;
+  color: #157946; 
+}
+
+@media (max-width: 768px) {
+  .cart-container {
+    flex-direction: column;
+  }
+
+  .cart-title {
+    font-size: 18px;
+    text-align: center;
+  }
+}
