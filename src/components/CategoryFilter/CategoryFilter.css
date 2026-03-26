@@ -1,0 +1,30 @@
+.category-filter {
+  display: flex;
+  align-items: center;
+}
+
+/* Match input height + style */
+.category-select {
+  padding: 8px 12px;
+  height: 36px;                  /* same visual height as input */
+  border: 1px solid #157946;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+/* Focus style */
+.category-select:focus {
+  outline: none;
+  border-color: #EC1B24; /* SPAR red */
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .category-select {
+    height: 30px;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
