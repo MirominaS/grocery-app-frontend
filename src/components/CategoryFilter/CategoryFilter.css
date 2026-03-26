@@ -3,10 +3,10 @@
   align-items: center;
 }
 
-/* Match input height + style */
+
 .category-select {
   padding: 8px 12px;
-  height: 36px;                  /* same visual height as input */
+  height: 36px;                  
   border: 1px solid #157946;
   border-radius: 4px;
   font-size: 14px;
@@ -17,7 +17,7 @@
 /* Focus style */
 .category-select:focus {
   outline: none;
-  border-color: #EC1B24; /* SPAR red */
+  border-color: #EC1B24;
 }
 
 /* Mobile */
