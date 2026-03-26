@@ -1,0 +1,19 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.no-products {
+  font-size: 18px;
+  color: #EC1B24; 
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    gap: 12px;
+    padding: 16px;
+  }
+}
