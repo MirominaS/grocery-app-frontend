@@ -4,29 +4,25 @@ import Header from '../../components/Header/Header';
 import CartItem from '../../components/CartItem/CartItem';
 import CartSummary from '../../components/CartSummary/CartSummary';
 
-const Cart = () => {
-    const cartItems = [
-    {
-      id: 1,
-      name: "Apple",
-      price: 120,
-      quantity: 2,
-      image_url: "/placeholder.png"
-    },
-    {
-      id: 2,
-      name: "Milk",
-      price: 0.8,
-      quantity: 1,
-      image_url: "/placeholder.png"
-    }
-  ];
-
-  const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0
-  );
+const Cart = ({cartItems, setCartItems}) => {
+  const removeItem = (id) => {
+    const updated = cartItems.filter(item => item.id !== id)
+    setCartItems(updated)
+  }
   
+  console.log(cartItems);
+
+  const updateQuantity = (id,qty) => {
+    const updated = cartItems.map(item =>
+      item.id === id ? {...item, quantity: qty} : item
+    )
+    setCartItems(updated)
+  }
+
+  const total = cartItems.reduce((sum, item) => {
+    return sum + item.price * item.quantity
+  },0)
+
   return (
     <div className='cart-page'>
       <Header />
@@ -37,7 +33,12 @@ const Cart = () => {
 
           {cartItems.length > 0 ? (
             cartItems.map((item) => (
-              <CartItem key={item.id} item={item} />
+              <CartItem 
+                key={item.id} 
+                item={item}
+                removeItem={removeItem}
+                updateQuantity={updateQuantity}
+              />
             ))
           ) : (
             <p className='empty-cart'>Your cart is empty</p>
