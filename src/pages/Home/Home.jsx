@@ -7,20 +7,21 @@ import { getProducts } from '../../api/productApi'
 const Home = () => {
 
   const [products, setProducts] = useState([])
+  const [search, setSearch] = useState("")
 
   useEffect(() => {
     fetchProducts()
-  },[])
+  },[search])
 
   const fetchProducts = async () => {
-    const res = await getProducts()
+    const res = await getProducts(search)
     if (res && res.success) {
       setProducts(res.data)
     }
   }
   return (
     <div className='home'>
-        <Header/>
+        <Header setSearch={setSearch}/>
 
         <div className='home-content'>
             <h2 className='home-title'>Products</h2>
