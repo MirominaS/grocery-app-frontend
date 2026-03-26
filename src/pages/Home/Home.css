@@ -14,6 +14,20 @@
   text-align: center;
 }
 
+@media (min-width: 481px) and (max-width: 1024px) {
+  .home-content {
+    padding: 40px 20px;
+    max-width: 95%; 
+    margin: 0 auto;
+  }
+
+  .home-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+}
+
 @media (max-width: 480px) {
   .home-title {
     font-size: 18px;

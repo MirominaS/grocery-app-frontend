@@ -11,6 +11,24 @@
   color: #EC1B24; 
 }
 
+@media (min-width: 769px) and (max-width: 1024px) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 15px; 
+    padding: 30px 10px; 
+    max-width: 95% ; 
+    margin: 0 auto; 
+  }
+
+  .no-products {
+    font-size: 20px;
+    margin-top: 50px;
+    font-weight: 500;
+  }
+}
+
 @media (max-width: 768px) {
   .product-list {
     gap: 12px;

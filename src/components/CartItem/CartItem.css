@@ -73,6 +73,44 @@
   background-color: #157946; 
 }
 
+@media (min-width: 481px) and (max-width: 1024px) {
+  .cart-item {
+    padding: 18px; 
+    margin: 15px 30px; 
+    gap: 20px; 
+  }
+
+  .cart-item-image {
+    width: 100px; 
+    height: 100px;
+  }
+
+  .cart-item-name {
+    font-size: 18px; 
+  }
+
+  .cart-item-price {
+    font-size: 16px;
+  }
+
+  .qty-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .qty-value {
+    font-size: 16px;
+    min-width: 25px; 
+    text-align: center;
+  }
+
+  .remove-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
 
 @media (max-width: 480px) {
   .cart-item {
