@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Home cartItems={cartItems} setCartItems={setCartItems}/>}/>
         <Route path = "/cart" element = {<Cart cartItems={cartItems} setCartItems={setCartItems}/>}/>
-        <Route path = "/checkout" element = {<CheckoutPage cartItems={cartItems}/>}/>
+        <Route path = "/checkout" element = {<CheckoutPage cartItems={cartItems} setCartItems={setCartItems}/>}/>
         <Route path = "/admin" element = {<Admin/>}/>
       </Routes>
     </BrowserRouter>

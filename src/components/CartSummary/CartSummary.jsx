@@ -1,7 +1,10 @@
 import React from 'react'
 import './CartSummary.css'
+import { useNavigate } from 'react-router-dom'
 
 const CartSummary = ({total}) => {
+  const navigate = useNavigate();
+
   return (
      <div className='cart-summary'>
       <h2 className='summary-title'>Order Summary</h2>
@@ -11,7 +14,7 @@ const CartSummary = ({total}) => {
         <span className='summary-total'>${total}</span>
       </div>
 
-      <button className='checkout-btn'>Proceed to Checkout</button>
+      <button className='checkout-btn' onClick={() => navigate('/checkout')}>Proceed to Checkout</button>
     </div>
   )
 }
