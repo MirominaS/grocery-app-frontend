@@ -12,7 +12,7 @@ const CartItem = ({item, removeItem, updateQuantity}) => {
 
       <div className='cart-item-details'>
         <h3 className='cart-item-name'>{item.name}</h3>
-        <p className='cart-item-price'>Price: LKR {item.price}</p>
+        <p className='cart-item-price'>Price: $ {item.price}</p>
       </div>
 
       <div className='cart-item-quantity'>
